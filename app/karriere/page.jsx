@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function KarrierePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -1120,17 +1121,21 @@ export default function KarrierePage() {
               data-w-id="25ee2989-7528-078a-6215-f3ce16ae41a8"
               className="navbar_logo-link w-nav-brand"
             >
-              <img
+              <Image
                 loading="eager"
                 src="/images/logo.png"
                 alt="Logo"
                 className="navbar_logo"
+                width={150}
+                height={60}
               />
-              <img
+              <Image
                 src="/images/logo.png"
                 loading="lazy"
                 alt="Logo"
                 className="navbar_logo is-white"
+                width={150}
+                height={60}
               />
             </a>
             <div
@@ -1352,7 +1357,7 @@ export default function KarrierePage() {
                             index === currentSlide ? "active" : ""
                           }`}
                         >
-                          <img
+                          <Image
                             src={slide}
                             loading={index === 0 ? "eager" : "lazy"}
                             sizes="(max-width: 1946px) 100vw, 1946px"
@@ -1360,6 +1365,8 @@ export default function KarrierePage() {
                               index + 1
                             } - Das Service-Team der Taj Mahal Trattoria`}
                             className="image_parallax is-jpf"
+                            fill
+                            style={{ objectFit: 'cover' }}
                           />
                         </div>
                       ))}
@@ -1389,24 +1396,28 @@ export default function KarrierePage() {
                   id="w-node-_813ba5c3-2845-0bbb-53c9-2f6875f59609-04a9f370"
                   className="karriere_images-left"
                 >
-                  <img
+                  <Image
                     src="/images/inthali.png"
                     loading="lazy"
                     data-w-id="5bd5f6dc-8160-330d-3da1-fd77d9f93657"
                     alt="Illustration einer fröhlichen Comicfigur mit Spaghetti und Schriftzug ‚Dolce Far Niente' – verspieltes Taj Mahal-Motiv im Retro-Stil."
                     className="karriere_image-1"
+                    width={400}
+                    height={400}
                   />
                   <div
                     data-w-id="85183d07-0140-b9a5-e6bb-055406c52eaa"
                     className="karriere_image-wrapper"
                   >
-                    <img
+                    <Image
                       className="karriere_image-3"
                       src="/images/career3.png"
                       alt="Köchin der Taj Mahal Trattoria lächelt in die Kamera und präsentiert stolz ein angerichtetes Gericht mit Rucola und Rindfleisch – Einblick hinter die Kulissen der Küche."
                       sizes="(max-width: 854px) 100vw, 854px"
                       data-w-id="7d38b233-a1bb-c71e-98b8-62f5fecf7d34"
                       loading="lazy"
+                      width={854}
+                      height={570}
                     />
                   </div>
                 </div>
@@ -1415,20 +1426,24 @@ export default function KarrierePage() {
                     data-w-id="5274c26e-7404-cdea-c04e-f34aee2c9edb"
                     className="karriere_image-wrapper"
                   >
-                    <img
+                    <Image
                       className="karriere_image-2"
                       src="/images/career2.png"
                       alt="Barkeeper der Taj Mahal Trattoria beim Mixen eines Drinks – Eiswürfel fliegen durch die Luft, während er mit dem Shaker arbeitet – Actionmoment an der Bar."
                       sizes="(max-width: 854px) 100vw, 854px"
                       data-w-id="d27680b7-e0a9-dcab-d02d-9e787ff21395"
                       loading="lazy"
+                      width={854}
+                      height={570}
                     />
                   </div>
-                  <img
+                  <Image
                     src="/images/food.png"
                     sizes="(max-width: 765px) 100vw, 765px"
                     alt="Illustration einer Zitrusfrucht mit Blättern, spiralförmig geschälter Schale und aufgeschnittener Hälfte – botanisches Motiv im Vintage-Stil."
                     className="karriere_image-4"
+                    width={765}
+                    height={765}
                   />
                 </div>
               </div>
@@ -1440,12 +1455,14 @@ export default function KarrierePage() {
               <div className="container-large">
                 <div className="event_item is-right">
                   <div className="event_item-left">
-                    <img
+                    <Image
                       src="/images/taj-mahal-tshirt.png"
                       loading="lazy"
                       sizes="(max-width: 1536px) 100vw, 1536px"
                       alt="Servicekraft im Taj Mahal Restaurant mit aufgesticktem Logo auf der Rückenpartie der Uniform – stilvoll balanciert sie mehrere Weingläser mit der Hand."
                       className="event_item-image"
+                      width={1536}
+                      height={1024}
                     />
                     <div className="event_item-color_wrapper">
                       <div className="event_item-color"></div>
@@ -1497,11 +1514,13 @@ export default function KarrierePage() {
                       className="footer-top_center"
                     >
                       <a href="/" className="w-inline-block">
-                        <img
+                        <Image
                           src="/images/logo.png"
                           loading="lazy"
                           alt="Logo"
                           className="footer_logo"
+                          width={200}
+                          height={80}
                         />
                       </a>
                       <div className="footer-text-wrapper">

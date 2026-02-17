@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import TopNavbar from "../components/TopNavbar";
 
@@ -927,40 +928,46 @@ export default function Page() {
             >
               <div className="home_slider-mask w-slider-mask">
                 <div className="home_hero-wrapper w-slide">
-                  <img
+                  <Image
                     src="/images/hh1.jpg"
-                    loading="eager"
+                    priority
+                    fill
                     style={{
+                      objectFit: "cover",
                       transform:
                         "translate3d(0, 0, 0) scale3d(1.05, 1.05, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
                     }}
-                    sizes="(max-width: 3340px) 100vw, 3340px"
+                    sizes="100vw"
                     alt="Heller, stilvoll eingerichteter Gastraum des Restaurant Taj Mahal in Poing mit warmem Ambiente und traditionellen indischen Designelementen – authentisches Flair in modernem Ambiente."
                     className="home_hero-image"
                   />
                 </div>
                 <div className="home_hero-wrapper w-slide">
-                  <img
+                  <Image
                     src="/images/hh2.jpg"
-                    loading="eager"
+                    priority
+                    fill
                     style={{
+                      objectFit: "cover",
                       transform:
                         "translate3d(0, 0, 0) scale3d(1.05, 1.05, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
                     }}
-                    sizes="(max-width: 3340px) 100vw, 3340px"
+                    sizes="100vw"
                     alt="Stilvoller Gastraum des Restaurant Taj Mahal in Poing mit dekorativen Elementen, gemütlichen Sitzplätzen und authentischer indischer Atmosphäre – ideal für traditionelle Gerichte und Familienessen."
                     className="home_hero-image"
                   />
                 </div>
                 <div className="home_hero-wrapper w-slide">
-                  <img
+                  <Image
                     src="/images/hh3.jpg"
-                    loading="eager"
+                    priority
+                    fill
                     style={{
+                      objectFit: "cover",
                       transform:
                         "translate3d(0, 0, 0) scale3d(1.05, 1.05, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
                     }}
-                    sizes="(max-width: 3340px) 100vw, 3340px"
+                    sizes="100vw"
                     alt="Stilvoller Gastraum im Restaurant Taj Mahal in Poing mit warmem Licht und eleganter Atmosphäre für private Dinner und Familienfeiern."
                     className="home_hero-image"
                   />
@@ -970,9 +977,11 @@ export default function Page() {
               <div className="home_slider-arrow w-slider-arrow-right"></div>
               <div className="home_slider-nav w-slider-nav"></div>
             </div>
-            <img
+            <Image
               src="/images/tajmahalhome.png"
-              loading="eager"
+              priority
+              width={400}
+              height={200}
               style={{
                 opacity: 1,
                 visibility: "visible",
@@ -1005,11 +1014,14 @@ export default function Page() {
                           index === currentSlide ? "active" : ""
                         }`}
                       >
-                        <img
+                        <Image
                           src={slide}
                           alt="Restaurant Taj Mahal Poing - Authentische indische Küche"
                           className="about-image"
-                          loading={index === 0 ? "eager" : "lazy"}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          style={{ objectFit: "cover" }}
+                          priority={index === 0}
                         />
                       </div>
                     ))}
@@ -1159,12 +1171,14 @@ export default function Page() {
                 </div>
 
                 {/* IMAGE 1 (keep for design) */}
-                <img
+                <Image
                   src="/images/inthali.png"
                   loading="lazy"
                   data-w-id="18dd8d7e-0c98-ac3c-d969-9a035947a090"
                   alt="Decorative element"
                   className="home_image-plate"
+                  width={300}
+                  height={300}
                   style={{
                     transform:
                       "translate3d(0.076%, -0.076%, 0px) rotateZ(57.5deg)",
@@ -1231,21 +1245,25 @@ export default function Page() {
                 </div>
 
                 {/* IMAGE 2 (keep decorative asset so layout stays same) */}
-                <img
+                <Image
                   src="/images/mangolassi.png"
                   loading="lazy"
                   alt="Decorative element"
                   className="home_image-glass"
+                  width={200}
+                  height={300}
                   style={{ willChange: "transform" }}
                 />
               </div>
 
               {/* Lemon / branch image, keep to preserve floating elements */}
-              <img
+              <Image
                 src="/images/samosa.png"
                 loading="lazy"
                 alt="Decorative branch"
                 className="home_image-branch"
+                width={250}
+                height={250}
                 style={{ willChange: "transform" }}
               />
             </div>
@@ -1257,26 +1275,26 @@ export default function Page() {
             <div className="marquee" aria-label="Galerie">
               <div className="marquee-track">
                 <div className="marquee-card shine">
-                  <img src="/images/hs1.jpg" alt="Interior 1" />
+                  <Image src="/images/hs1.jpg" alt="Interior 1" fill sizes="300px" style={{ objectFit: "cover" }} />
                 </div>
                 <div className="marquee-card shine">
-                  <img src="/images/hs2.jpg" alt="Interior 2" />
+                  <Image src="/images/hs2.jpg" alt="Interior 2" fill sizes="300px" style={{ objectFit: "cover" }} />
                 </div>
 
                 <div className="marquee-card shine">
-                  <img src="/images/hs4.jpg" alt="Interior 4" />
+                  <Image src="/images/hs4.jpg" alt="Interior 4" fill sizes="300px" style={{ objectFit: "cover" }} />
                 </div>
                 <div className="marquee-card shine">
-                  <img src="/images/hh.png" alt="Interior 3" />
+                  <Image src="/images/hh.png" alt="Interior 3" fill sizes="300px" style={{ objectFit: "cover" }} />
                 </div>
                 <div className="marquee-card shine">
-                  <img src="/images/hs5.jpg" alt="Interior 5" />
+                  <Image src="/images/hs5.jpg" alt="Interior 5" fill sizes="300px" style={{ objectFit: "cover" }} />
                 </div>
                 <div className="marquee-card shine">
-                  <img src="/images/hs6.jpg" alt="Interior 3" />
+                  <Image src="/images/hs6.jpg" alt="Interior 3" fill sizes="300px" style={{ objectFit: "cover" }} />
                 </div>
                 <div className="marquee-card shine">
-                  <img src="/images/hs7.jpg" alt="Interior 4" />
+                  <Image src="/images/hs7.jpg" alt="Interior 4" fill sizes="300px" style={{ objectFit: "cover" }} />
                 </div>
               </div>
             </div>
@@ -1294,11 +1312,13 @@ export default function Page() {
                     className="footer-top_center"
                   >
                     <a href="/" className="w-inline-block">
-                      <img
+                      <Image
                         src="/images/logo.png"
                         loading="lazy"
                         alt="Logo"
                         className="footer_logo"
+                        width={200}
+                        height={80}
                       />
                     </a>
                     <div className="footer-text-wrapper">
@@ -1372,40 +1392,23 @@ export default function Page() {
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossOrigin="anonymous"
         strategy="afterInteractive"
-        onError={(e) => {
-          console.error("Error loading jQuery:", e);
-        }}
-      />
-      <Script
-        id="gigi-chunk-1"
-        src="/js/js-gigi-2025.schunk.36b8fb49256177c8.js"
-        strategy="lazyOnload"
-        onError={(e) => {
-          console.warn("Error loading gigi chunk 1:", e);
-        }}
-      />
-      <Script
-        id="gigi-chunk-2"
-        src="/js/js-gigi-2025.schunk.1176fe8c62e4f594.js"
-        strategy="lazyOnload"
-        onError={(e) => {
-          console.warn("Error loading gigi chunk 2:", e);
-        }}
-      />
-      <Script
-        id="gigi-chunk-3"
-        src="/js/js-gigi-2025.schunk.61b534daaaeddbc7.js"
-        strategy="lazyOnload"
-        onError={(e) => {
-          console.warn("Error loading gigi chunk 3:", e);
-        }}
-      />
-      <Script
-        id="gigi-main"
-        src="/js/js-gigi-2025.786f41e7.0091cb714b9c1fb6.js"
-        strategy="lazyOnload"
-        onError={(e) => {
-          console.warn("Error loading gigi main:", e);
+        onLoad={() => {
+          const scripts = [
+            "/js/js-gigi-2025.schunk.36b8fb49256177c8.js",
+            "/js/js-gigi-2025.schunk.1176fe8c62e4f594.js",
+            "/js/js-gigi-2025.schunk.61b534daaaeddbc7.js",
+            "/js/js-gigi-2025.786f41e7.0091cb714b9c1fb6.js",
+          ];
+          let i = 0;
+          function loadNext() {
+            if (i >= scripts.length) return;
+            const s = document.createElement("script");
+            s.src = scripts[i];
+            s.onload = () => { i++; loadNext(); };
+            s.onerror = () => { i++; loadNext(); };
+            document.body.appendChild(s);
+          }
+          loadNext();
         }}
       />
     </>

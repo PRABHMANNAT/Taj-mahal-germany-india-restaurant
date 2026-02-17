@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 export default function MenuPage() {
   const [menuData, setMenuData] = useState(null);
@@ -737,17 +738,21 @@ export default function MenuPage() {
       >
         <div className="navbar_container">
           <a href="/" className="navbar_logo-link w-nav-brand">
-            <img
+            <Image
               loading="eager"
               src="/images/logo.png"
               alt="Logo"
               className="navbar_logo"
+              width={150}
+              height={60}
             />
-            <img
+            <Image
               src="/images/logo.png"
               loading="lazy"
               alt="Logo"
               className="navbar_logo is-white"
+              width={150}
+              height={60}
             />
           </a>
           <div className="nav_link-wrapper">
@@ -804,7 +809,7 @@ export default function MenuPage() {
 
       {/* Menu Header Image */}
       <div className="menu-header-image-wrapper">
-        <img src="/images/menu-header.png" alt="Menu Header" loading="eager" />
+        <Image src="/images/menu-header.png" alt="Menu Header" loading="eager" width={1200} height={600} sizes="100vw" style={{ width: '100%', height: 'auto' }} />
       </div>
 
       {/* Hero Header */}
@@ -995,11 +1000,13 @@ export default function MenuPage() {
                   className="footer-top_center"
                 >
                   <a href="/" className="w-inline-block">
-                    <img
+                    <Image
                       src="/images/logo.png"
                       loading="lazy"
                       alt="Logo"
                       className="footer_logo"
+                      width={200}
+                      height={80}
                     />
                   </a>
                   <div className="footer-text-wrapper">

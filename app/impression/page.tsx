@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function ImpressionPage() {
   const tiltImagesRef = useRef<(HTMLImageElement | null)[]>([]);
@@ -377,18 +378,22 @@ export default function ImpressionPage() {
               data-w-id="25ee2989-7528-078a-6215-f3ce16ae41a8"
               className="navbar_logo-link w-nav-brand"
             >
-              <img
+              <Image
                 loading="eager"
                 src="/images/logo.png"
                 alt="Logo"
                 className="navbar_logo"
+                width={150}
+                height={60}
               />
-              <img
+              <Image
                 src="/images/logo.png"
                 loading="lazy"
                 data-w-id="5426709b-5c20-473e-6fda-ba3a826a9da3"
                 alt="Logo"
                 className="navbar_logo is-white"
+                width={150}
+                height={60}
               />
             </a>
             <div
@@ -602,12 +607,15 @@ export default function ImpressionPage() {
                       style={{ opacity: 1 }}
                       className="image_parallax-wrapper"
                     >
-                      <img
-                        src="images/event1image.png"
+                      <Image
+                        src="/images/event1image.png"
                         loading="lazy"
                         sizes="(max-width: 1112px) 100vw, 1112px"
                         alt="Heller, stilvoll eingerichteter Gastraum der GIGI Trattoria in München mit großen Fensterfronten, rosafarbenen Samtsofas, gemusterten Sesseln und Retro-Lampen – italienisches Flair in modernem Ambiente."
                         className="image_parallax is-390400"
+                        width={1112}
+                        height={600}
+                        style={{ width: '100%', height: 'auto' }}
                       />
                     </div>
                   </div>
@@ -624,7 +632,7 @@ export default function ImpressionPage() {
               <div className="container-large">
                 <div className="impressionen_images-component">
                   <div className="impressionen_images-left">
-                    <img
+                    <Image
                       className="impressionen_image-1"
                       src="/images/event2image.png"
                       alt="Italienische Tavolata mit vielfältigen Gerichten wie Pasta, gegrilltem Fisch, Fleisch und Antipasti auf bunten Keramiktellern – stilvoll angerichtet auf rustikalem Holztisch im GIGI Restaurant."
@@ -632,18 +640,22 @@ export default function ImpressionPage() {
                       sizes="(max-width: 1310px) 100vw, 1310px"
                       data-w-id="71d4d094-209d-2234-7c0f-91c71429fa3e"
                       loading="lazy"
+                      width={1310}
+                      height={800}
                     />
-                    <img
+                    <Image
                       src="/images/event4image.png"
                       loading="lazy"
                       style={{ opacity: 1 }}
                       data-w-id="71d4d094-209d-2234-7c0f-91c71429fa3f"
                       alt="Nahaufnahme einer Hand, die eine Flasche Roséwein mit dem Etikett ‚Amore Senza Fine' hält – stilvolle Getränkeszene im GIGI Restaurant."
                       className="impressionen_image-3"
+                      width={600}
+                      height={800}
                     />
                   </div>
                   <div className="impressionen_image-right">
-                    <img
+                    <Image
                       className="impressionen_image-2"
                       src="/images/event3image.png"
                       alt="Stimmungsvolle Gesamtaufnahme des GIGI Restaurants in München mit imposanten Fransenlampen, offener Bar, eleganten Sitzbereichen und stilvoller Lichtinszenierung – italienisches Flair auf zwei Ebenen."
@@ -651,6 +663,8 @@ export default function ImpressionPage() {
                       sizes="(max-width: 804px) 100vw, 804px"
                       data-w-id="71d4d094-209d-2234-7c0f-91c71429fa41"
                       loading="lazy"
+                      width={804}
+                      height={600}
                     />
                     <img
                       ref={(el) => {
@@ -667,13 +681,15 @@ export default function ImpressionPage() {
                 </div>
                 <div className="impressionen_images-component is-mob">
                   <div className="impressionen_images-left">
-                    <img
+                    <Image
                       src="/images/680ce7f65120df33e1a9bf6d-680d1573113d0ea65d57d5e4_Rechteck%201794.avif"
                       loading="lazy"
                       id="w-node-_13fffa71-8327-4baf-ce42-c4b09dfb8a13-f9fcf116"
                       sizes="(max-width: 1310px) 100vw, 1310px"
                       alt="Italienische Tavolata mit vielfältigen Gerichten wie Pasta, gegrilltem Fisch, Fleisch und Antipasti auf bunten Keramiktellern – stilvoll angerichtet auf rustikalem Holztisch im GIGI Restaurant."
                       className="impressionen_image-1"
+                      width={1310}
+                      height={800}
                     />
                     <img
                       ref={(el) => {
@@ -686,20 +702,24 @@ export default function ImpressionPage() {
                       alt="blue cocktail"
                       className="impressionen_image-4 tilt-image"
                     />
-                    <img
+                    <Image
                       src="/images/680ce7f65120df33e1a9bf6d-680d15733e86477a69ea6293_Rechteck%201803.avif"
                       loading="lazy"
                       id="w-node-_13fffa71-8327-4baf-ce42-c4b09dfb8a14-f9fcf116"
                       alt="Nahaufnahme einer Hand, die eine Flasche Roséwein mit dem Etikett ‚Amore Senza Fine' hält – stilvolle Getränkeszene im GIGI Restaurant."
                       className="impressionen_image-3"
+                      width={600}
+                      height={800}
                     />
-                    <img
+                    <Image
                       src="/images/680ce7f65120df33e1a9bf6d-680d15832c8bf853b1dd98a3_Frame%2068.avif"
                       loading="lazy"
                       id="w-node-_13fffa71-8327-4baf-ce42-c4b09dfb8a16-f9fcf116"
                       sizes="(max-width: 804px) 100vw, 804px"
                       alt="Stimmungsvolle Gesamtaufnahme des GIGI Restaurants in München mit imposanten Fransenlampen, offener Bar, eleganten Sitzbereichen und stilvoller Lichtinszenierung – italienisches Flair auf zwei Ebenen."
                       className="impressionen_image-2"
+                      width={804}
+                      height={600}
                     />
                   </div>
                 </div>
@@ -769,7 +789,7 @@ export default function ImpressionPage() {
               <div className="container-large">
                 <div className="impressionen_images-component">
                   <div className="impressionen_images-left">
-                    <img
+                    <Image
                       className="impressionen_image-1"
                       src="/images/event9image.png"
                       alt="Die Cicchetteria der GIGI Trattoria: stilvoller Nebenraum mit dekorativen Fliesen, heller Holzbar, gemütlichen Sitzplätzen und mediterraner Atmosphäre – ideal für Aperitivo und kleine Gerichte."
@@ -777,10 +797,12 @@ export default function ImpressionPage() {
                       sizes="(max-width: 983px) 100vw, 983px"
                       data-w-id="dd420398-4386-8960-faed-9b685f7505f2"
                       loading="lazy"
+                      width={983}
+                      height={600}
                     />
                   </div>
                   <div className="impressionen_image-right">
-                    <img
+                    <Image
                       className="impressionen_image-2"
                       src="/images/event7image.png"
                       alt="Detailaufnahme der stilvollen Bar im GIGI Restaurant mit Marmortheke, hohen Barhockern, Zitrusfrüchten, Glaswaren und edler Ausstattung – mediterrane Eleganz trifft auf italienische Barkultur."
@@ -788,6 +810,8 @@ export default function ImpressionPage() {
                       sizes="(max-width: 804px) 100vw, 804px"
                       data-w-id="1c016943-7623-6a4b-107e-2a54432ee544"
                       loading="lazy"
+                      width={804}
+                      height={600}
                     />
                     <img
                       ref={(el) => {
@@ -804,13 +828,15 @@ export default function ImpressionPage() {
                 </div>
                 <div className="impressionen_images-component is-mob">
                   <div className="impressionen_images-left">
-                    <img
+                    <Image
                       src="/images/event7image.png"
                       loading="lazy"
                       id="w-node-_7c557cb7-2d20-debe-80e7-bc88b6aa4806-f9fcf116"
                       sizes="(max-width: 983px) 100vw, 983px"
                       alt="Die Cicchetteria der GIGI Trattoria: stilvoller Nebenraum mit dekorativen Fliesen, heller Holzbar, gemütlichen Sitzplätzen und mediterraner Atmosphäre – ideal für Aperitivo und kleine Gerichte."
                       className="impressionen_image-1"
+                      width={983}
+                      height={600}
                     />
                     <img
                       src="https://photos.smugmug.com/Asia/India/i-Pf4hCQr/0/d3d38770/X2/indian-food-dosa-X2.jpg"
@@ -819,13 +845,15 @@ export default function ImpressionPage() {
                       alt="Gourmetgericht mit gegrilltem Oktopus, Gemüse und Kräutern auf handbemaltem italienischem Keramikteller – serviert im GIGI Restaurant mit einem Glas Weißwein."
                       className="impressionen_image-3"
                     />
-                    <img
+                    <Image
                       src="/images/event6image.png"
                       loading="lazy"
                       id="w-node-_7c557cb7-2d20-debe-80e7-bc88b6aa4809-f9fcf116"
                       sizes="(max-width: 804px) 100vw, 804px"
                       alt="Detailaufnahme der stilvollen Bar im GIGI Restaurant mit Marmortheke, hohen Barhockern, Zitrusfrüchten, Glaswaren und edler Ausstattung – mediterrane Eleganz trifft auf italienische Barkultur."
                       className="impressionen_image-2"
+                      width={804}
+                      height={600}
                     />
                     <img
                       ref={(el) => {
@@ -851,14 +879,16 @@ export default function ImpressionPage() {
                   data-w-id="47889ad9-de7f-35e6-71d2-4bbd590bac53"
                   className="image_parallax-wrapper"
                 >
-                  <img
+                  <Image
                     className="image_parallax"
-                    src="images/event10image.png"
+                    src="/images/event10image.png"
                     alt="Das Separee Citronella im GIGI Restaurant: stilvoller Raum mit floraler Zitronen-Decke, warmem Licht, rosafarbenem Samtsofa und eleganter Atmosphäre für private Dinner."
                     style={{ opacity: 1 }}
                     sizes="(max-width: 1112px) 100vw, 1112px"
                     data-w-id="b23bba75-1d13-e410-51e4-9fa7fe045e09"
                     loading="lazy"
+                    width={1112}
+                    height={600}
                   />
                 </div>
               </div>
@@ -876,11 +906,13 @@ export default function ImpressionPage() {
                       className="footer-top_center"
                     >
                       <a href="/" className="w-inline-block">
-                        <img
+                        <Image
                           src="/images/logo.png"
                           loading="lazy"
                           alt="Logo"
                           className="footer_logo"
+                          width={200}
+                          height={80}
                         />
                       </a>
                       <div className="footer-text-wrapper">

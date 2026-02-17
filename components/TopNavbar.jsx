@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function TopNavbar() {
 	useEffect(() => {
@@ -121,18 +122,22 @@ export default function TopNavbar() {
 						data-w-id="25ee2989-7528-078a-6215-f3ce16ae41a8"
 						className="navbar_logo-link w-nav-brand"
 					>
-						<img
+						<Image
 							loading="eager"
 							src="/images/logo.png"
 							alt="Logo"
 							className="navbar_logo"
+							width={150}
+							height={60}
 						/>
-						<img
+						<Image
 							src="/images/logo.png"
 							loading="lazy"
 							data-w-id="5426709b-5c20-473e-6fda-ba3a826a9da3"
 							alt="Logo"
 							className="navbar_logo is-white"
+							width={150}
+							height={60}
 						/>
 					</a>
 					<div

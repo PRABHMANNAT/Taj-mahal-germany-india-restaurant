@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function KontaktPage() {
   const [toastVisible, setToastVisible] = useState(false);
@@ -589,18 +590,22 @@ export default function KontaktPage() {
               data-w-id="25ee2989-7528-078a-6215-f3ce16ae41a8"
               className="navbar_logo-link w-nav-brand"
             >
-              <img
+              <Image
                 loading="eager"
                 src="/images/logo.png"
                 alt="Logo"
                 className="navbar_logo"
+                width={150}
+                height={60}
               />
-              <img
+              <Image
                 src="/images/logo.png"
                 loading="lazy"
                 data-w-id="5426709b-5c20-473e-6fda-ba3a826a9da3"
                 alt="Logo"
                 className="navbar_logo is-white"
+                width={150}
+                height={60}
               />
             </a>
             <div
@@ -920,7 +925,7 @@ export default function KontaktPage() {
               <div className="marquee" aria-label="Galerie">
                 <div className="marquee-track">
                   <div className="marquee-card shine">
-                    <img src="/images/INT.png" alt="Interior 1" />
+                    <Image src="/images/INT.png" alt="Interior 1" width={300} height={180} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="marquee-card shine">
                     <img
@@ -929,33 +934,48 @@ export default function KontaktPage() {
                     />
                   </div>
                   <div className="marquee-card shine">
-                    <img
+                    <Image
                       src="/images/680ce7f65120df33e1a9bf6d-683dfa69574fa7baf536c3ee_Italian-shot-glockenbach.avif"
                       alt="Interior 3"
+                      width={300}
+                      height={180}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
                   <div className="marquee-card shine">
-                    <img
+                    <Image
                       src="/images/680ce7f65120df33e1a9bf6d-683dfa77511d9e5f860dee01_Italian-shot-maxvorstadt.avif"
                       alt="Interior 4"
+                      width={300}
+                      height={180}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
                   <div className="marquee-card shine">
-                    <img
+                    <Image
                       src="/images/680ce7f65120df33e1a9bf6d-6810e072a0bf621ba2bf2666_Gigi-slider-01.avif"
                       alt="Interior 5"
+                      width={300}
+                      height={180}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
                   <div className="marquee-card shine">
-                    <img
+                    <Image
                       src="/images/680ce7f65120df33e1a9bf6d-683dfa69574fa7baf536c3ee_Italian-shot-glockenbach.avif"
                       alt="Interior 3"
+                      width={300}
+                      height={180}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
                   <div className="marquee-card shine">
-                    <img
+                    <Image
                       src="/images/680ce7f65120df33e1a9bf6d-683dfa77511d9e5f860dee01_Italian-shot-maxvorstadt.avif"
                       alt="Interior 4"
+                      width={300}
+                      height={180}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
                 </div>
@@ -984,11 +1004,13 @@ export default function KontaktPage() {
                     className="footer-top_center"
                   >
                     <a href="/" className="w-inline-block">
-                      <img
+                      <Image
                         src="/images/logo.png"
                         loading="lazy"
                         alt="Logo"
                         className="footer_logo"
+                        width={200}
+                        height={80}
                       />
                     </a>
                     <div className="footer-text-wrapper">
